@@ -15,10 +15,10 @@
   },
   {
     "id": "p3",
-    "name": "Hanumat Tekari Hoodie",
-    "price": 1499,
-    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3a2e?w=800",
-    "description": "Soft fleece hoodie with minimalist Hanumat Tekari branding. Perfect for cool evenings."
+    "name": "Hanumat Tekari Polo Shirt",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
+    "description": "Classic polo shirt with embroidered Hanumat Tekari logo. Perfect for casual and semi-formal occasions."
   },
   {
     "id": "p4",
@@ -71,17 +71,17 @@
   },
   {
     "id": "p11",
-    "name": "Hanumat Tekari Socks",
-    "price": 199,
-    "image": "https://images.unsplash.com/photo-1586363104867-9f57a0d96ab1?w=800",
-    "description": "Breathable cotton socks featuring subtle Hanumat Tekari stitched patterns."
+    "name": "Hanumat Tekari Laptop Sticker",
+    "price": 49,
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+    "description": "High-quality vinyl sticker perfect for personalizing your laptop or phone."
   },
   {
     "id": "p12",
-    "name": "Hanumat Tekari Phone Case",
-    "price": 399,
-    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1c6?w=800",
-    "description": "Durable matte-finish phone case with sleek Hanumat Tekari logo design."
+    "name": "Hanumat Tekari Mouse Pad",
+    "price": 199,
+    "image": "https://images.unsplash.com/photo-1527864550417-7f91c4b0b0a4?w=800",
+    "description": "Premium mouse pad with non-slip base and Hanumat Tekari design."
   },
   {
     "id": "p13",
@@ -99,9 +99,9 @@
   },
   {
     "id": "p15",
-    "name": "Hanumat Tekari Candle",
-    "price": 299,
-    "image": "https://images.unsplash.com/photo-1600185365483-26d7b3ef3f93?w=800",
-    "description": "Hand-poured soy wax candle with calming sandalwood fragrance."
+    "name": "Hanumat Tekari Desk Organizer",
+    "price": 449,
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+    "description": "Wooden desk organizer with compartments for pens, papers, and office supplies."
   }
 ]
