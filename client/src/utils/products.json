@@ -1,0 +1,107 @@
+[
+  {
+    "id": "p1",
+    "name": "Hanumat Tekari T-Shirt",
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800",
+    "description": "Comfortable cotton T-shirt with Hanumat Tekari branding."
+  },
+  {
+    "id": "p2",
+    "name": "Hanumat Tekari Mug",
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=800",
+    "description": "Ceramic mug perfect for your morning chai or coffee."
+  },
+  {
+    "id": "p3",
+    "name": "Hanumat Tekari Hoodie",
+    "price": 1499,
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3a2e?w=800&auto=format&fit=crop&q=80",
+    "description": "Soft fleece hoodie with minimalist Hanumat Tekari branding. Perfect for cool evenings."
+  },
+  {
+    "id": "p4",
+    "name": "Hanumat Tekari Cap",
+    "price": 299,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=800",
+    "description": "Stylish cap with embroidered Hanumat Tekari logo."
+  },
+  {
+    "id": "p5",
+    "name": "Hanumat Tekari Notebook",
+    "price": 199,
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800",
+    "description": "Premium quality notebook for your thoughts and ideas."
+  },
+  {
+    "id": "p6",
+    "name": "Hanumat Tekari Water Bottle",
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800",
+    "description": "Eco-friendly stainless steel water bottle."
+  },
+  {
+    "id": "p7",
+    "name": "Hanumat Tekari Bag",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+    "description": "Durable canvas bag perfect for daily use."
+  },
+  {
+    "id": "p8",
+    "name": "Hanumat Tekari Keychain",
+    "price": 149,
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+    "description": "Unique keychain with Hanumat Tekari design."
+  },
+  {
+    "id": "p9",
+    "name": "Hanumat Tekari Stickers",
+    "price": 99,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+    "description": "Set of 5 vinyl stickers for your laptop or phone."
+  },
+  {
+    "id": "p10",
+    "name": "Hanumat Tekari Poster",
+    "price": 249,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+    "description": "High-quality poster featuring Hanumat Tekari artwork."
+  },
+  {
+    "id": "p11",
+    "name": "Hanumat Tekari Socks",
+    "price": 199,
+    "image": "https://images.unsplash.com/photo-1586363104867-9f57a0d96ab1?w=800&auto=format&fit=crop&q=80",
+    "description": "Breathable cotton socks featuring subtle Hanumat Tekari stitched patterns."
+  },
+  {
+    "id": "p12",
+    "name": "Hanumat Tekari Phone Case",
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1c6?w=800&auto=format&fit=crop&q=80",
+    "description": "Durable matte-finish phone case with sleek Hanumat Tekari logo design."
+  },
+  {
+    "id": "p13",
+    "name": "Hanumat Tekari Wallet",
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800",
+    "description": "Leather wallet with Hanumat Tekari branding."
+  },
+  {
+    "id": "p14",
+    "name": "Hanumat Tekari Bracelet",
+    "price": 349,
+    "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800",
+    "description": "Elegant bracelet with cultural motifs."
+  },
+  {
+    "id": "p15",
+    "name": "Hanumat Tekari Candle",
+    "price": 299,
+    "image": "https://images.unsplash.com/photo-1600185365483-26d7b3ef3f93?w=800&auto=format&fit=crop&q=80",
+    "description": "Hand-poured soy wax candle with calming sandalwood fragrance."
+  }
+]
