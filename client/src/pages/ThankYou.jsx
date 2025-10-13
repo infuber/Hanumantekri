@@ -1,9 +1,27 @@
 import { useLocation, Link } from 'react-router-dom'
+import { useEffect } from 'react';
 import Container from '../components/Container.jsx'
 
-export default function ThankYou() {
+const ThankYou = () => {
   const location = useLocation()
-  const orderId = location.state?.orderId
+  const orderId = location.state?.orderId;
+
+  useEffect(() => {
+    // Dynamically load tracker.js from infuber.com
+    const script = document.createElement('script');
+    script.src = 'https://www.infuber.com/tracker.js';
+    script.async = true;
+    script.defer = true;
+    script.onload = () => console.log('✅ Tracker script loaded successfully');
+    script.onerror = (err) => console.error('❌ Failed to load tracker script:', err);
+    document.body.appendChild(script);
+
+    // Cleanup on component unmount
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <main style={{ padding: '16px 0' }}>
       <Container>
@@ -17,5 +35,6 @@ export default function ThankYou() {
     </main>
   )
 }
+export default ThankYou;
 
 
