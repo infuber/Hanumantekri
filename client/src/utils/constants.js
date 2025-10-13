@@ -1,4 +1,4 @@
-export const API_BASE = 'https://hanumantekri.onrender.com/api'
+export const API_BASE = 'https://hanumantekri-y6lf.onrender.com/api'
 
 export function formatCurrency(value) {
   try {
