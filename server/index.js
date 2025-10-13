@@ -3,6 +3,7 @@ import cors from 'cors';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import cron from 'node-cron';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -42,8 +43,30 @@ app.post('/api/checkout', async (req, res) => {
   res.json({ status: 'success', orderId: `ORD-${Date.now()}` });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// Health check endpoint for cron job
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
 });
 
+// Schedule cron job to ping the server every 1 hour
+cron.schedule('0 * * * *', () => {
+  const serverUrl = process.env.SERVER_URL || `http://localhost:${PORT}`;
+  console.log(`[${new Date().toISOString()}] Pinging server health endpoint...`);
+  
+  fetch(`${serverUrl}/api/health`)
+    .then(response => {
+      if (response.ok) {
+        console.log('✅ Server health check successful');
+      } else {
+        console.log('❌ Server health check failed:', response.status);
+      }
+    })
+    .catch(error => {
+      console.log('❌ Server health check error:', error.message);
+    });
+});
 
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log('Cron job scheduled to ping server every hour');
+});

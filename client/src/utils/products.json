@@ -17,7 +17,7 @@
     "id": "p3",
     "name": "Hanumat Tekari Hoodie",
     "price": 1499,
-    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3a2e?w=800&auto=format&fit=crop&q=80",
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3a2e?w=800",
     "description": "Soft fleece hoodie with minimalist Hanumat Tekari branding. Perfect for cool evenings."
   },
   {
@@ -73,14 +73,14 @@
     "id": "p11",
     "name": "Hanumat Tekari Socks",
     "price": 199,
-    "image": "https://images.unsplash.com/photo-1586363104867-9f57a0d96ab1?w=800&auto=format&fit=crop&q=80",
+    "image": "https://images.unsplash.com/photo-1586363104867-9f57a0d96ab1?w=800",
     "description": "Breathable cotton socks featuring subtle Hanumat Tekari stitched patterns."
   },
   {
     "id": "p12",
     "name": "Hanumat Tekari Phone Case",
     "price": 399,
-    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1c6?w=800&auto=format&fit=crop&q=80",
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1c6?w=800",
     "description": "Durable matte-finish phone case with sleek Hanumat Tekari logo design."
   },
   {
@@ -101,7 +101,7 @@
     "id": "p15",
     "name": "Hanumat Tekari Candle",
     "price": 299,
-    "image": "https://images.unsplash.com/photo-1600185365483-26d7b3ef3f93?w=800&auto=format&fit=crop&q=80",
+    "image": "https://images.unsplash.com/photo-1600185365483-26d7b3ef3f93?w=800",
     "description": "Hand-poured soy wax candle with calming sandalwood fragrance."
   }
 ]
