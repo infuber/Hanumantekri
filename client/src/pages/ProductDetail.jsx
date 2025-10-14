@@ -1,16 +1,34 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import { useCart } from '../state/CartContext.jsx'
 import Container from '../components/Container.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { formatCurrency, API_BASE } from '../utils/constants.js'
 
-export default function ProductDetail() {
-  const { id } = useParams()
+const ProductDetail = () => {
+  const { id } = useParams();
+  const location = useLocation();
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const { addItem } = useCart()
+
+  // --- Track Click Data ---
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const clickId = params.get('lastClickId');
+    const shortCode = params.get('shortCode');
+    const clickTimestamp = params.get('clickTimestamp');
+    const deviceFingerprint = params.get('deviceFingerprint');
+
+    if (clickId && shortCode && clickTimestamp && deviceFingerprint) {
+      // Save in localStorage for all future pages
+      localStorage.setItem('lastClickId', clickId);
+      localStorage.setItem('shortCode', shortCode);
+      localStorage.setItem('clickTimestamp', clickTimestamp);
+      localStorage.setItem('deviceFingerprint', deviceFingerprint);
+    }
+  }, [location.search]);
 
   useEffect(() => {
     fetch(`${API_BASE}/products/${id}`)
@@ -41,4 +59,4 @@ export default function ProductDetail() {
   )
 }
 
-
+export default ProductDetail;
