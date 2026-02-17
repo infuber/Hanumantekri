@@ -6,22 +6,22 @@ const ThankYou = () => {
   const location = useLocation();
   const orderId = location.state?.orderId;
 
-  useEffect(() => {
-    // --- Dynamically load Infuber Tracker ---
-    const script = document.createElement('script');
-    script.src = 'https://www.infuber.com/tracker.js';
-    script.async = true;
-    script.defer = true;
-    script.crossOrigin = 'anonymous'; // important for CORS
-    script.onload = () => console.log('✅ Infuber tracker loaded successfully');
-    script.onerror = (err) => console.error('❌ Failed to load tracker script:', err);
-    document.body.appendChild(script);
+//tracker script 
+useEffect(() => {
+  if (orderId) {
+    window.orderId = orderId; // 🔥 important
+  }
 
-    // Cleanup on component unmount
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const script = document.createElement('script');
+  script.src = 'https://www.infuber.com/tracker.js';
+  script.async = true;
+  document.body.appendChild(script);
+
+  return () => {
+    document.body.removeChild(script);
+  };
+}, [orderId]);
+
 
   return (
     <main style={{ padding: '16px 0' }}>

@@ -14,21 +14,18 @@ const ProductDetail = () => {
   const { addItem } = useCart()
 
   // --- Track Click Data ---
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const clickId = params.get('lastClickId');
-    const shortCode = params.get('shortCode');
-    const clickTimestamp = params.get('clickTimestamp');
-    const deviceFingerprint = params.get('deviceFingerprint');
+ useEffect(() => {
+  const params = new URLSearchParams(location.search);
 
-    if (clickId && shortCode && clickTimestamp && deviceFingerprint) {
-      // Save in localStorage for all future pages
-      localStorage.setItem('lastClickId', clickId);
-      localStorage.setItem('shortCode', shortCode);
-      localStorage.setItem('clickTimestamp', clickTimestamp);
-      localStorage.setItem('deviceFingerprint', deviceFingerprint);
-    }
-  }, [location.search]);
+  const clickId = params.get('clickId');
+  const shortCode = params.get('shortCode');
+
+  if (clickId && shortCode) {
+    localStorage.setItem('inf_clickId', clickId);
+    localStorage.setItem('inf_shortCode', shortCode);
+  }
+}, [location.search]);
+
 
   useEffect(() => {
     fetch(`${API_BASE}/products/${id}`)
