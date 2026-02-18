@@ -5,6 +5,8 @@ import Container from '../components/Container.jsx';
 const ThankYou = () => {
   const location = useLocation();
   const orderId = location.state?.orderId;
+  const orderValue = location.state?.orderValue;
+
 
 //tracker script 
 // useEffect(() => {
