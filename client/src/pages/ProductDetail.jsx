@@ -23,6 +23,7 @@ const ProductDetail = () => {
   if (clickId && shortCode) {
     localStorage.setItem('inf_clickId', clickId);
     localStorage.setItem('inf_shortCode', shortCode);
+    localStorage.setItem('inf_clickTime', Date.now().toString());
   }
 }, [location.search]);
 

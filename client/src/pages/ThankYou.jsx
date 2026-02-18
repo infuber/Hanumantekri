@@ -4,44 +4,54 @@ import Container from '../components/Container.jsx';
 
 const ThankYou = () => {
   const location = useLocation();
-  const orderId = location.state?.orderId;
-  const orderValue = location.state?.orderValue;
+  const orderId =
+    location.state?.orderId ||
+    location.state?.referenceId ||
+    location.state?.txnId ||
+    null;
+
+  const orderValue =
+    location.state?.orderValue ||
+    location.state?.price ||
+    location.state?.total ||
+    0;
 
 
-//tracker script 
-// useEffect(() => {
-//   if (orderId) {
-//     window.orderId = orderId; // 🔥 important
-//   }
 
-//   const script = document.createElement('script');
-//   script.src = 'https://www.infuber.com/tracker.js';
-//   script.async = true;
-//   document.body.appendChild(script);
+  //tracker script 
+  // useEffect(() => {
+  //   if (orderId) {
+  //     window.orderId = orderId; // 🔥 important
+  //   }
 
-//   return () => {
-//     document.body.removeChild(script);
-//   };
-// }, [orderId]);
+  //   const script = document.createElement('script');
+  //   script.src = 'https://www.infuber.com/tracker.js';
+  //   script.async = true;
+  //   document.body.appendChild(script);
 
-// Thank you page (Company Side)
-useEffect(() => {
-  if (orderId) {
-    window.orderId = orderId; // 🔥 important – tracker.js reads this
-  }
-  if (orderValue != null) {
-    window.orderValue = orderValue; // optional – tracker can send to API
-  }
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, [orderId]);
 
-  const script = document.createElement('script');
-  script.src = 'https://www.infuber.com/tracker.js';
-  script.async = true;
-  document.body.appendChild(script);
+  // Thank you page (Company Side)
+  useEffect(() => {
+    if (orderId) {
+      window.orderId = orderId; // 🔥 important – tracker.js reads this
+    }
+    if (orderValue != null) {
+      window.orderValue = orderValue; // optional – tracker can send to API
+    }
 
-  return () => {
-    document.body.removeChild(script);
-  };
-}, [orderId, orderValue]);
+    const script = document.createElement('script');
+    script.src = 'https://www.infuber.com/tracker.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [orderId, orderValue]);
 
 
   return (
