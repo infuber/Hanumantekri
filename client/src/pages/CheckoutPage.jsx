@@ -23,7 +23,7 @@ export default function CheckoutPage() {
       const data = await res.json()
       if (!res.ok) throw new Error(data?.message || 'Payment failed')
       clearCart()
-      navigate('/thank-you', { state: { orderId: data.orderId } })
+      navigate('/thank-you', { state: { orderId: data.orderId , orderValue: data.orderValue } })
     } catch (e) {
       setError(e.message)
     } finally {
