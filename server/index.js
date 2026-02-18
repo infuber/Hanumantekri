@@ -38,9 +38,19 @@ app.post('/api/checkout', async (req, res) => {
   if (!Array.isArray(cartItems) || cartItems.length === 0) {
     return res.status(400).json({ message: 'Cart is empty' });
   }
+  // Calculate total order value
+  let orderValue = 0;
+
+  for (const item of cartItems) {
+    const product = products.find(p => p.id === item.id);
+    if (product) {
+      const quantity = item.quantity || 1;
+      orderValue += product.price * quantity;
+    }
+  }
   // simulate processing delay
   await new Promise(r => setTimeout(r, 1200));
-  res.json({ status: 'success', orderId: `ORD-${Date.now()}` });
+  res.json({ status: 'success', orderId: `ORD-${Date.now()}`, orderValue });
 });
 
 // Health check endpoint for cron job

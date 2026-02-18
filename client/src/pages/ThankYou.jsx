@@ -7,9 +7,28 @@ const ThankYou = () => {
   const orderId = location.state?.orderId;
 
 //tracker script 
+// useEffect(() => {
+//   if (orderId) {
+//     window.orderId = orderId; // 🔥 important
+//   }
+
+//   const script = document.createElement('script');
+//   script.src = 'https://www.infuber.com/tracker.js';
+//   script.async = true;
+//   document.body.appendChild(script);
+
+//   return () => {
+//     document.body.removeChild(script);
+//   };
+// }, [orderId]);
+
+// Thank you page (Company Side)
 useEffect(() => {
   if (orderId) {
-    window.orderId = orderId; // 🔥 important
+    window.orderId = orderId; // 🔥 important – tracker.js reads this
+  }
+  if (orderValue != null) {
+    window.orderValue = orderValue; // optional – tracker can send to API
   }
 
   const script = document.createElement('script');
@@ -20,7 +39,7 @@ useEffect(() => {
   return () => {
     document.body.removeChild(script);
   };
-}, [orderId]);
+}, [orderId, orderValue]);
 
 
   return (
