@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 
 const SHLOKA_EN = `Om Shri Hanumate Namah
@@ -57,7 +57,7 @@ export default function MainHallView() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         style={{
-          fontFamily: 'Tiro Devanagari Hindi, serif',
+          fontFamily: 'Noto Sans Devanagari, serif',
           fontSize: 'clamp(2rem, 6vw, 4rem)',
           color: '#ffc107',
           textShadow: '0 0 40px rgba(255,193,7,0.8), 0 0 80px rgba(255,107,53,0.4)',
@@ -119,7 +119,7 @@ export default function MainHallView() {
         <p
           style={{
             fontFamily:
-              language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Cinzel, serif',
+              language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Cinzel, serif',
             fontSize: language === 'hi' ? '1.2rem' : '0.95rem',
             color: '#fff8e7',
             lineHeight: 2,

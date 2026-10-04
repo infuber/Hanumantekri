@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 import useAreas from '../../hooks/useAreas'
@@ -81,7 +81,7 @@ function AreaCard({ area, index, language, onSelect }) {
         </div>
         <div
           style={{
-            fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Tiro Devanagari Hindi, serif',
+            fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Noto Sans Devanagari, serif',
             fontSize: '0.9rem',
             color: '#c9a96e',
           }}
@@ -97,7 +97,7 @@ function AreaCard({ area, index, language, onSelect }) {
           color: 'rgba(201,169,110,0.7)',
           lineHeight: 1.5,
           maxWidth: '200px',
-          fontFamily: language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Inter, sans-serif',
+          fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Inter, sans-serif',
         }}
       >
         {language === 'en' ? area.description_en : area.description_hi}
@@ -175,7 +175,7 @@ export default function AreaMap() {
           </h1>
           <p
             style={{
-              fontFamily: 'Tiro Devanagari Hindi, serif',
+              fontFamily: 'Noto Sans Devanagari, serif',
               fontSize: '1.1rem',
               color: '#c9a96e',
             }}

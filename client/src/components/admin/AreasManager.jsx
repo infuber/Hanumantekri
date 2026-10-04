@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { supabase } from '../../lib/supabase'
 
 const cellStyle = {
@@ -31,7 +31,7 @@ function AreaRow({ area, onSaveFee, onToggleActive, saving }) {
       <td style={cellStyle}>{area.icon}</td>
       <td style={{ ...cellStyle, color: '#c9a96e', fontSize: '0.75rem' }}>{area.slug}</td>
       <td style={cellStyle}>{area.name_en}</td>
-      <td style={{ ...cellStyle, fontFamily: 'Tiro Devanagari Hindi, serif' }}>{area.name_hi}</td>
+      <td style={{ ...cellStyle, fontFamily: 'Noto Sans Devanagari, serif' }}>{area.name_hi}</td>
       <td style={cellStyle}>
         <input
           type="number"

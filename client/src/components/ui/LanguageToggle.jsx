@@ -1,4 +1,4 @@
-import useTempleStore from '../../store/templeStore'
+﻿import useTempleStore from '../../store/templeStore'
 
 export default function LanguageToggle() {
   const { language, setLanguage } = useTempleStore()
@@ -16,7 +16,7 @@ export default function LanguageToggle() {
         borderRadius: '20px',
         padding: '0.4rem 0.9rem',
         color: '#ffc107',
-        fontFamily: language === 'en' ? 'Cinzel, serif' : 'Tiro Devanagari Hindi, serif',
+        fontFamily: language === 'en' ? 'Cinzel, serif' : 'Noto Sans Devanagari, serif',
         fontSize: '0.85rem',
         letterSpacing: '0.08em',
         cursor: 'pointer',
@@ -40,7 +40,7 @@ export default function LanguageToggle() {
       <span style={{ color: 'rgba(255,193,7,0.4)' }}>|</span>
       <span
         style={{
-          fontFamily: 'Tiro Devanagari Hindi, serif',
+          fontFamily: 'Noto Sans Devanagari, serif',
           opacity: language === 'hi' ? 1 : 0.45,
         }}
       >

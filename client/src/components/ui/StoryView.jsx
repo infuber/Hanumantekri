@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 import useStories from '../../hooks/useStories'
@@ -31,7 +31,7 @@ function StoryCard({ story, language, onClick, index }) {
       <div style={{ flex: 1 }}>
         <p
           style={{
-            fontFamily: language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Cinzel, serif',
+            fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Cinzel, serif',
             fontSize: language === 'hi' ? '1.1rem' : '0.95rem',
             color: '#fff8e7',
             marginBottom: '0.25rem',
@@ -41,7 +41,7 @@ function StoryCard({ story, language, onClick, index }) {
         </p>
         <p
           style={{
-            fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Tiro Devanagari Hindi, serif',
+            fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Noto Sans Devanagari, serif',
             fontSize: '0.8rem',
             color: '#c9a96e',
           }}
@@ -96,7 +96,7 @@ function StoryReader({ story, language, onBack }) {
 
       <h2
         style={{
-          fontFamily: language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Cinzel, serif',
+          fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Cinzel, serif',
           fontSize: language === 'hi' ? '1.8rem' : '1.4rem',
           color: '#ffc107',
           marginBottom: '0.5rem',
@@ -107,7 +107,7 @@ function StoryReader({ story, language, onBack }) {
       </h2>
       <p
         style={{
-          fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Tiro Devanagari Hindi, serif',
+          fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Noto Sans Devanagari, serif',
           color: '#c9a96e',
           fontSize: '0.9rem',
           marginBottom: '2rem',
@@ -126,7 +126,7 @@ function StoryReader({ story, language, onBack }) {
 
       <p
         style={{
-          fontFamily: language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Inter, sans-serif',
+          fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Inter, sans-serif',
           fontSize: language === 'hi' ? '1.15rem' : '1rem',
           color: '#fff8e7',
           lineHeight: 2,
@@ -178,7 +178,7 @@ export default function StoryView() {
         >
           📖 KATHA MANDAP
         </h1>
-        <p style={{ fontFamily: 'Tiro Devanagari Hindi, serif', color: '#c9a96e', fontSize: '1rem' }}>
+        <p style={{ fontFamily: 'Noto Sans Devanagari, serif', color: '#c9a96e', fontSize: '1rem' }}>
           {language === 'en' ? 'Sacred Stories of Hanumat Ji' : 'हनुमत जी की पवित्र कथाएं'}
         </p>
       </motion.div>

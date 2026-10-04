@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 import useChalisa from '../../hooks/useChalisa'
 
@@ -41,7 +41,7 @@ function VerseCard({ verse, language, index }) {
       {/* Main text — always Hindi */}
       <p
         style={{
-          fontFamily: 'Tiro Devanagari Hindi, serif',
+          fontFamily: 'Noto Sans Devanagari, serif',
           fontSize: 'clamp(1.1rem, 2.5vw, 1.35rem)',
           color: '#fff8e7',
           lineHeight: 2.2,
@@ -90,7 +90,7 @@ function VerseCard({ verse, language, index }) {
         <p
           style={{
             fontFamily:
-              language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Inter, sans-serif',
+              language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Inter, sans-serif',
             fontSize: language === 'hi' ? '1rem' : '0.85rem',
             color: 'rgba(255,248,231,0.7)',
             lineHeight: 1.8,
@@ -132,7 +132,7 @@ export default function ChalisaView() {
       >
         <h1
           style={{
-            fontFamily: 'Tiro Devanagari Hindi, serif',
+            fontFamily: 'Noto Sans Devanagari, serif',
             fontSize: 'clamp(1.8rem, 5vw, 3rem)',
             color: '#ffc107',
             textShadow: '0 0 30px rgba(255,193,7,0.7)',

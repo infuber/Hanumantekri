@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 
 export default function AreaGate({ area, language, onEnter, onClose }) {
   return (
@@ -52,7 +52,7 @@ export default function AreaGate({ area, language, onEnter, onClose }) {
         </h2>
         <p
           style={{
-            fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Tiro Devanagari Hindi, serif',
+            fontFamily: language === 'hi' ? 'Cinzel, serif' : 'Noto Sans Devanagari, serif',
             color: '#c9a96e',
             fontSize: '0.9rem',
             marginBottom: '1.2rem',
@@ -68,7 +68,7 @@ export default function AreaGate({ area, language, onEnter, onClose }) {
             fontSize: '0.9rem',
             lineHeight: 1.7,
             marginBottom: '1.5rem',
-            fontFamily: language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Inter, sans-serif',
+            fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Inter, sans-serif',
           }}
         >
           {language === 'en' ? area.description_en : area.description_hi}

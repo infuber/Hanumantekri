@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 
@@ -38,7 +38,7 @@ export default function LoadingScreen() {
             transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
             style={{
               fontSize: '5rem',
-              fontFamily: 'Tiro Devanagari Hindi, serif',
+              fontFamily: 'Noto Sans Devanagari, serif',
               color: '#ffc107',
               textShadow: '0 0 40px rgba(255,193,7,0.8), 0 0 80px rgba(255,107,53,0.4)',
               lineHeight: 1,
@@ -67,7 +67,7 @@ export default function LoadingScreen() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
             style={{
-              fontFamily: 'Tiro Devanagari Hindi, serif',
+              fontFamily: 'Noto Sans Devanagari, serif',
               fontSize: '1.1rem',
               color: '#c9a96e',
               textAlign: 'center',

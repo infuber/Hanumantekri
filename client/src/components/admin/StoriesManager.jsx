@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { supabase } from '../../lib/supabase'
 
 const inputStyle = {
@@ -45,7 +45,7 @@ function StoryForm({ initial, areaId, onSave, onCancel, saving }) {
         </div>
         <div>
           <label style={labelStyle}>TITLE (HI)</label>
-          <input style={{ ...inputStyle, fontFamily: 'Tiro Devanagari Hindi, serif' }} value={form.title_hi} onChange={(e) => set('title_hi', e.target.value)} required />
+          <input style={{ ...inputStyle, fontFamily: 'Noto Sans Devanagari, serif' }} value={form.title_hi} onChange={(e) => set('title_hi', e.target.value)} required />
         </div>
         <div>
           <label style={labelStyle}>CONTENT (EN)</label>
@@ -53,7 +53,7 @@ function StoryForm({ initial, areaId, onSave, onCancel, saving }) {
         </div>
         <div>
           <label style={labelStyle}>CONTENT (HI)</label>
-          <textarea style={{ ...taStyle, fontFamily: 'Tiro Devanagari Hindi, serif' }} value={form.content_hi} onChange={(e) => set('content_hi', e.target.value)} required />
+          <textarea style={{ ...taStyle, fontFamily: 'Noto Sans Devanagari, serif' }} value={form.content_hi} onChange={(e) => set('content_hi', e.target.value)} required />
         </div>
       </div>
       <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
@@ -167,7 +167,7 @@ export default function StoriesManager() {
             <div key={story.id} style={{ background: 'rgba(18,8,42,0.8)', border: '1px solid rgba(255,193,7,0.12)', borderRadius: '10px', padding: '1rem 1.25rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
                 <p style={{ fontFamily: 'Cinzel, serif', color: '#fff8e7', fontSize: '0.9rem', marginBottom: '0.2rem' }}>{story.title_en}</p>
-                <p style={{ fontFamily: 'Tiro Devanagari Hindi, serif', color: '#c9a96e', fontSize: '0.85rem' }}>{story.title_hi}</p>
+                <p style={{ fontFamily: 'Noto Sans Devanagari, serif', color: '#c9a96e', fontSize: '0.85rem' }}>{story.title_hi}</p>
               </div>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <button onClick={() => { setEditStory(story); setShowAdd(false) }} style={{ background: 'rgba(255,193,7,0.1)', border: '1px solid rgba(255,193,7,0.3)', borderRadius: '6px', padding: '0.3rem 0.8rem', color: '#ffc107', fontFamily: 'Cinzel, serif', fontSize: '0.7rem', cursor: 'pointer' }}>Edit</button>

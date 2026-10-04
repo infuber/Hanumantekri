@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #0a0515;
   --surface: #12082a;
   --surface-hover: #1a0f3a;
@@ -39,7 +39,7 @@ h1, h2, h3, .cinzel {
 }
 
 .hindi {
-  font-family: 'Tiro Devanagari Hindi', serif;
+  font-family: 'Noto Sans Devanagari', serif;
 }
 
 button {

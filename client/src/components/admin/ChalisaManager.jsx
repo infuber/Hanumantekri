@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { supabase } from '../../lib/supabase'
 
 const inputStyle = {
@@ -50,7 +50,7 @@ function VerseForm({ initial, onSave, onCancel, saving }) {
         </div>
         <div style={{ gridColumn: '1 / -1' }}>
           <label style={labelStyle}>TEXT (HI — Devanagari)</label>
-          <textarea style={{ ...taStyle, fontFamily: 'Tiro Devanagari Hindi, serif', fontSize: '1rem' }} value={form.text_hi} onChange={(e) => set('text_hi', e.target.value)} required />
+          <textarea style={{ ...taStyle, fontFamily: 'Noto Sans Devanagari, serif', fontSize: '1rem' }} value={form.text_hi} onChange={(e) => set('text_hi', e.target.value)} required />
         </div>
         <div style={{ gridColumn: '1 / -1' }}>
           <label style={labelStyle}>TEXT (EN — Romanised)</label>
@@ -58,7 +58,7 @@ function VerseForm({ initial, onSave, onCancel, saving }) {
         </div>
         <div>
           <label style={labelStyle}>MEANING (HI)</label>
-          <textarea style={{ ...taStyle, fontFamily: 'Tiro Devanagari Hindi, serif' }} value={form.meaning_hi} onChange={(e) => set('meaning_hi', e.target.value)} />
+          <textarea style={{ ...taStyle, fontFamily: 'Noto Sans Devanagari, serif' }} value={form.meaning_hi} onChange={(e) => set('meaning_hi', e.target.value)} />
         </div>
         <div>
           <label style={labelStyle}>MEANING (EN)</label>
@@ -149,7 +149,7 @@ export default function ChalisaManager() {
               <span style={{ fontFamily: 'Cinzel, serif', color: '#c9a96e', fontSize: '0.75rem', minWidth: '60px' }}>
                 #{verse.verse_number} <span style={{ opacity: 0.5 }}>{verse.verse_type}</span>
               </span>
-              <p style={{ fontFamily: 'Tiro Devanagari Hindi, serif', color: '#fff8e7', fontSize: '0.9rem', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <p style={{ fontFamily: 'Noto Sans Devanagari, serif', color: '#fff8e7', fontSize: '0.9rem', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {verse.text_hi?.split('\n')[0]}
               </p>
               <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 
@@ -81,7 +81,7 @@ export default function PujaView() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         style={{
-          fontFamily: 'Tiro Devanagari Hindi, serif',
+          fontFamily: 'Noto Sans Devanagari, serif',
           fontSize: 'clamp(1.8rem, 5vw, 3rem)',
           color: '#ffc107',
           textShadow: '0 0 30px rgba(255,193,7,0.7)',
@@ -157,7 +157,7 @@ export default function PujaView() {
             </p>
             <p
               style={{
-                fontFamily: 'Tiro Devanagari Hindi, serif',
+                fontFamily: 'Noto Sans Devanagari, serif',
                 color: '#c9a96e',
                 fontSize: '1rem',
                 lineHeight: 1.8,
@@ -230,7 +230,7 @@ export default function PujaView() {
                 borderRadius: '10px',
                 padding: '1rem',
                 color: '#fff8e7',
-                fontFamily: language === 'hi' ? 'Tiro Devanagari Hindi, serif' : 'Inter, sans-serif',
+                fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'Inter, sans-serif',
                 fontSize: language === 'hi' ? '1rem' : '0.9rem',
                 resize: 'vertical',
                 outline: 'none',
