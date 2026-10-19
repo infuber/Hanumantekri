@@ -19,6 +19,7 @@ import VratKathaView from '../components/ui/VratKathaView'
 import TirthYatraView from '../components/ui/TirthYatraView'
 import SevaSahyogView from '../components/ui/SevaSahyogView'
 import AudioPlayer from '../components/ui/AudioPlayer'
+import ChadhavaPrompt from '../components/ui/ChadhavaPrompt'
 
 function AreaContent() {
   const { currentArea } = useTempleStore()
@@ -90,6 +91,9 @@ export default function TemplePage() {
 
           {/* Global devotional audio player — always visible after loading */}
           <AudioPlayer />
+
+          {/* Chadhava prompt — appears 5s after bell is rung, bottom-left */}
+          <ChadhavaPrompt />
 
           {/* Entrance hint — shown when view is 'entrance' */}
           {view === 'entrance' && (
