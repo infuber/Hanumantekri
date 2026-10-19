@@ -82,6 +82,17 @@ const EXTRA_AREAS = [
     is_free: true,
     entry_fee: 0,
   },
+  {
+    id: 'seva-sahyog',
+    slug: 'seva-sahyog',
+    name_en: 'Seva Sahyog',
+    name_hi: 'सेवा सहयोग',
+    description_en: 'Join in the seva of this sacred space — light a diya, offer flowers, or sponsor a special prayer.',
+    description_hi: 'दीपक जलाएं, पुष्प अर्पण करें, या विशेष प्रार्थना के साथ सेवा में सहयोग करें।',
+    icon: '🙏',
+    is_free: true,
+    entry_fee: 0,
+  },
 ]
 
 function SectionDivider({ label }) {

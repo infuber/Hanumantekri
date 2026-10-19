@@ -17,6 +17,7 @@ import BhajanView from '../components/ui/BhajanView'
 import AartiView from '../components/ui/AartiView'
 import VratKathaView from '../components/ui/VratKathaView'
 import TirthYatraView from '../components/ui/TirthYatraView'
+import SevaSahyogView from '../components/ui/SevaSahyogView'
 import AudioPlayer from '../components/ui/AudioPlayer'
 
 function AreaContent() {
@@ -45,6 +46,8 @@ function AreaContent() {
       return <VratKathaView />
     case 'tirth-yatra':
       return <TirthYatraView />
+    case 'seva-sahyog':
+      return <SevaSahyogView />
     default:
       return null
   }
