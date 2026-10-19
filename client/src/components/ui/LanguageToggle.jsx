@@ -8,8 +8,8 @@ export default function LanguageToggle() {
       onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
       style={{
         position: 'fixed',
-        top: '1rem',
-        right: '1rem',
+        top: '0.7rem',
+        right: '7rem',
         zIndex: 1000,
         background: 'rgba(18,8,42,0.85)',
         border: '1px solid rgba(255,193,7,0.4)',

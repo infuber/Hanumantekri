@@ -10,6 +10,14 @@ import MainHallView from '../components/ui/MainHallView'
 import StoryView from '../components/ui/StoryView'
 import ChalisaView from '../components/ui/ChalisaView'
 import PujaView from '../components/ui/PujaView'
+import HanumanNamesView from '../components/ui/HanumanNamesView'
+import BajrangBaanView from '../components/ui/BajrangBaanView'
+import SundarKandView from '../components/ui/SundarKandView'
+import BhajanView from '../components/ui/BhajanView'
+import AartiView from '../components/ui/AartiView'
+import VratKathaView from '../components/ui/VratKathaView'
+import TirthYatraView from '../components/ui/TirthYatraView'
+import AudioPlayer from '../components/ui/AudioPlayer'
 
 function AreaContent() {
   const { currentArea } = useTempleStore()
@@ -23,6 +31,20 @@ function AreaContent() {
       return <ChalisaView />
     case 'puja-room':
       return <PujaView />
+    case 'hanuman-names':
+      return <HanumanNamesView />
+    case 'bajrang-baan':
+      return <BajrangBaanView />
+    case 'sundar-kand':
+      return <SundarKandView />
+    case 'bhajan-sangrah':
+      return <BhajanView />
+    case 'aarti-sangrah':
+      return <AartiView />
+    case 'vrat-katha':
+      return <VratKathaView />
+    case 'tirth-yatra':
+      return <TirthYatraView />
     default:
       return null
   }
@@ -62,6 +84,9 @@ export default function TemplePage() {
             {/* Area content views */}
             {view === 'area' && <AreaContent key="area-content" />}
           </AnimatePresence>
+
+          {/* Global devotional audio player — always visible after loading */}
+          <AudioPlayer />
 
           {/* Entrance hint — shown when view is 'entrance' */}
           {view === 'entrance' && (
