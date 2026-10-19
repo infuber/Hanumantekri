@@ -2,7 +2,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import useTempleStore from '../../store/templeStore'
 import useAreas from '../../hooks/useAreas'
-import AreaGate from './AreaGate'
 
 const ICON_MAP = {
   bell: '🔔',
@@ -234,21 +233,8 @@ function AreaCard({ area, index, language, onSelect }) {
 export default function AreaMap() {
   const { language, setArea } = useTempleStore()
   const { areas, loading } = useAreas()
-  const [gateArea, setGateArea] = useState(null)
-
   function handleSelect(area) {
-    if (area.is_free) {
-      setArea(area.slug)
-    } else {
-      setGateArea(area)
-    }
-  }
-
-  function handleEnterAnyway() {
-    if (gateArea) {
-      setArea(gateArea.slug)
-      setGateArea(null)
-    }
+    setArea(area.slug)
   }
 
   // Merge DB areas with the hardcoded extra areas
@@ -341,17 +327,6 @@ export default function AreaMap() {
         )}
       </motion.div>
 
-      {/* Gate modal for paid areas */}
-      <AnimatePresence>
-        {gateArea && (
-          <AreaGate
-            area={gateArea}
-            language={language}
-            onEnter={handleEnterAnyway}
-            onClose={() => setGateArea(null)}
-          />
-        )}
-      </AnimatePresence>
     </>
   )
 }
