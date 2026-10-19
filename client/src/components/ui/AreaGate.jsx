@@ -1,6 +1,19 @@
 ﻿import { motion } from 'framer-motion'
+import useTempleStore from '../../store/templeStore'
+
+const ICON_MAP = {
+  bell: '🔔',
+  temple: '🕉️',
+  book: '📖',
+  scroll: '📜',
+  flower: '🪔',
+  star: '⭐',
+  lotus: '🌸',
+}
 
 export default function AreaGate({ area, language, onEnter, onClose }) {
+  const { setArea } = useTempleStore()
+  const icon = ICON_MAP[area.icon] || area.icon || '🕉️'
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -36,7 +49,7 @@ export default function AreaGate({ area, language, onEnter, onClose }) {
         }}
       >
         {/* Icon */}
-        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{area.icon}</div>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{icon}</div>
 
         {/* Name */}
         <h2
@@ -97,36 +110,25 @@ export default function AreaGate({ area, language, onEnter, onClose }) {
 
         {/* Buttons */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          {/* Donation — disabled, coming soon */}
+          {/* Seva Sahyog */}
           <button
-            disabled
+            onClick={() => { onClose(); setArea('seva-sahyog') }}
             style={{
-              background: 'rgba(255,193,7,0.08)',
-              border: '1px solid rgba(255,193,7,0.25)',
+              background: 'rgba(255,193,7,0.1)',
+              border: '1px solid rgba(255,193,7,0.4)',
               borderRadius: '10px',
               padding: '0.85rem',
-              color: 'rgba(255,193,7,0.4)',
+              color: '#ffc107',
               fontFamily: 'Cinzel, serif',
               fontSize: '0.85rem',
               letterSpacing: '0.08em',
-              cursor: 'not-allowed',
-              position: 'relative',
+              cursor: 'pointer',
+              transition: 'background 0.2s ease',
             }}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,193,7,0.18)'}
+            onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,193,7,0.1)'}
           >
-            💛 Make a Donation
-            <span
-              style={{
-                marginLeft: '0.5rem',
-                fontSize: '0.65rem',
-                background: 'rgba(255,107,53,0.3)',
-                borderRadius: '10px',
-                padding: '0.1rem 0.4rem',
-                color: '#ff6b35',
-                verticalAlign: 'middle',
-              }}
-            >
-              COMING SOON
-            </span>
+            🙏 Seva Sahyog · सेवा सहयोग
           </button>
 
           {/* Enter anyway */}
