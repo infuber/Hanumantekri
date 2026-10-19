@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const TRACKS = [
@@ -7,39 +7,39 @@ const TRACKS = [
     title_en: 'Hanuman Chalisa',
     title_hi: 'हनुमान चालीसा',
     artist: 'Gulshan Kumar & Hariharan',
-    videoId: 'YrPSzMYHu_o',
+    videoId: 'AETFvQonfV8',
     emoji: '🕉️',
   },
   {
-    id: 'chalisa-shankar',
+    id: 'chalisa-jasraj',
     title_en: 'Hanuman Chalisa',
     title_hi: 'हनुमान चालीसा',
-    artist: 'Shankar Mahadevan',
-    videoId: '2G-pgs_EN2k',
+    artist: 'Pandit Jasraj & Shankar Mahadevan',
+    videoId: 'EfEy_PHxkPs',
     emoji: '🕉️',
   },
   {
     id: 'aarti',
     title_en: 'Aarti Kije Hanuman Lala Ki',
     title_hi: 'आरती कीजे हनुमान लला की',
-    artist: 'Traditional',
-    videoId: 'LX-0VGgYiG0',
+    artist: 'Gulshan Kumar & Hariharan',
+    videoId: 'gbYXo2Xqlmk',
     emoji: '🪔',
   },
   {
-    id: 'bajrang',
-    title_en: 'Jai Hanuman Gyan Gun Sagar',
-    title_hi: 'जय हनुमान ज्ञान गुण सागर',
-    artist: 'Devotional',
-    videoId: 'laDEeVOmFdc',
+    id: 'chalisa-ashtak',
+    title_en: 'Hanuman Chalisa Ashtak',
+    title_hi: 'हनुमान चालीसा अष्टक',
+    artist: 'Gulshan Kumar & Hariharan',
+    videoId: 'LUx8wlA_dk8',
     emoji: '🔔',
   },
   {
     id: 'bajrang-baan',
     title_en: 'Bajrang Baan',
     title_hi: 'बजरंग बाण',
-    artist: 'Pandit Jasraj',
-    videoId: 'SDGPKLBrOGw',
+    artist: 'Hariharan · T-Series',
+    videoId: 'h1lT6cxwsPw',
     emoji: '🏹',
   },
 ]
