@@ -69,18 +69,33 @@ function MurtiColumn({ murti, isMain, language }) {
           />
         ) : (
           <div style={{
-            height: '90%', width: isMain ? '160px' : '90px',
-            background: 'linear-gradient(170deg, rgba(255,193,7,0.12) 0%, rgba(255,107,53,0.08) 100%)',
-            border: '1px solid rgba(255,193,7,0.25)',
+            height: '90%', width: isMain ? '180px' : '100px',
+            background: isMain
+              ? 'radial-gradient(ellipse at 50% 40%, rgba(255,193,7,0.18) 0%, rgba(255,107,53,0.1) 50%, rgba(10,5,21,0.4) 100%)'
+              : 'radial-gradient(ellipse at 50% 40%, rgba(255,193,7,0.1) 0%, rgba(10,5,21,0.3) 100%)',
+            border: `1px solid rgba(255,193,7,${isMain ? '0.35' : '0.18'})`,
             borderRadius: '12px 12px 60% 60% / 12px 12px 40% 40%',
             display: 'flex', flexDirection: 'column',
-            alignItems: 'center', justifyContent: 'center', gap: '0.6rem',
+            alignItems: 'center', justifyContent: 'center', gap: '0.8rem',
+            boxShadow: isMain ? '0 0 40px rgba(255,193,7,0.15) inset' : 'none',
           }}>
-            <span style={{ fontSize: isMain ? '3.5rem' : '2rem' }}>🕉️</span>
+            <motion.div
+              animate={{ opacity: [0.6, 1, 0.6], scale: [0.97, 1.03, 0.97] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              style={{
+                fontFamily: 'Noto Sans Devanagari, serif',
+                fontSize: isMain ? '3.5rem' : '2.2rem',
+                color: 'rgba(255,193,7,0.8)',
+                lineHeight: 1,
+              }}
+            >
+              ॐ
+            </motion.div>
             <div style={{
               fontFamily: 'Noto Sans Devanagari, serif',
               fontSize: isMain ? '0.9rem' : '0.65rem',
-              color: 'rgba(255,193,7,0.65)', textAlign: 'center', padding: '0 0.5rem',
+              color: 'rgba(255,193,7,0.6)', textAlign: 'center', padding: '0 0.5rem',
+              lineHeight: 1.4,
             }}>
               {murti.label_hi}
             </div>
@@ -165,13 +180,13 @@ function MalaGarland({ active }) {
           animate={{ opacity: 1, scaleX: 1 }}
           exit={{ opacity: 0 }}
           style={{
-            position: 'absolute', top: '12%', left: '50%',
+            position: 'absolute', top: '8%', left: '50%',
             transform: 'translateX(-50%)',
-            fontSize: '1.4rem', whiteSpace: 'nowrap',
-            pointerEvents: 'none', letterSpacing: '-0.1em',
+            fontSize: '1.3rem', whiteSpace: 'nowrap',
+            pointerEvents: 'none', letterSpacing: '-0.05em',
           }}
         >
-          🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸
+          🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸
         </motion.div>
       )}
     </AnimatePresence>
@@ -188,7 +203,7 @@ function AartiThali({ active }) {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ rotate: { duration: 3, repeat: Infinity, ease: 'linear' }, opacity: { duration: 0.4 }, scale: { duration: 0.4 } }}
           style={{
-            position: 'absolute', bottom: '20%', left: '50%',
+            position: 'absolute', bottom: '8%', left: '50%',
             transform: 'translateX(-50%)',
             fontSize: '3rem', pointerEvents: 'none',
             filter: 'drop-shadow(0 0 20px rgba(255,150,0,0.8))',
