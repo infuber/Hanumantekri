@@ -76,7 +76,7 @@ function MurtiColumn({ murti, isMain, language }) {
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center', gap: '0.6rem',
           }}>
-            <span style={{ fontSize: isMain ? '3.5rem' : '2rem' }}>🚩</span>
+            <span style={{ fontSize: isMain ? '3.5rem' : '2rem' }}>🕉️</span>
             <div style={{
               fontFamily: 'Noto Sans Devanagari, serif',
               fontSize: isMain ? '0.9rem' : '0.65rem',
@@ -238,6 +238,12 @@ export default function DigitalDarshanView() {
       playBell()
       setBellRing(true)
       setTimeout(() => setBellRing(false), 1200)
+      setActive(prev => {
+        const next = new Set(prev)
+        next.add('ghanti')
+        if (next.size === 5) setTimeout(() => setBlessed(true), 500)
+        return next
+      })
       return
     }
     if (id === 'mala') {
