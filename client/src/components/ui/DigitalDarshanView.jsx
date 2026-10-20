@@ -175,6 +175,37 @@ function Agarbatti({ active }) {
 }
 
 
+function GhantiBell({ ringing }) {
+  return (
+    <AnimatePresence>
+      {ringing && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          style={{
+            position: 'absolute', top: '12%', left: '50%',
+            transform: 'translateX(-50%)',
+            pointerEvents: 'none', zIndex: 10,
+            display: 'flex', flexDirection: 'column', alignItems: 'center',
+          }}
+        >
+          {/* Rope/hook */}
+          <div style={{ width: '3px', height: '28px', background: 'rgba(201,169,110,0.6)', borderRadius: '2px' }} />
+          {/* Bell swinging */}
+          <motion.div
+            animate={{ rotate: [-28, 28, -22, 22, -14, 14, -7, 7, 0] }}
+            transition={{ duration: 1.4, ease: 'easeInOut' }}
+            style={{ originY: 0, fontSize: '3.5rem', filter: 'drop-shadow(0 0 18px rgba(255,193,7,0.9)) drop-shadow(0 0 6px rgba(255,193,7,0.6))' }}
+          >
+            🔔
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
 function MalaGarland({ active }) {
   return (
     <AnimatePresence>
@@ -256,7 +287,7 @@ export default function DigitalDarshanView() {
     if (id === 'ghanti') {
       playBell()
       setBellRing(true)
-      setTimeout(() => setBellRing(false), 1200)
+      setTimeout(() => setBellRing(false), 2500)
       setActive(prev => {
         const next = new Set(prev)
         next.add('ghanti')
@@ -327,21 +358,18 @@ export default function DigitalDarshanView() {
         {/* Puja overlays — absolute to murti area */}
         <Diyas active={active.has('diya')} />
         <Agarbatti active={active.has('agarbatti')} />
+        <GhantiBell ringing={bellRing} />
         <MalaGarland active={active.has('mala')} />
         <AartiThali active={active.has('aarti')} />
         <PetalShower show={showPetals} />
 
-        {/* Bell swing wrapper on the whole row */}
-        <motion.div
-          animate={bellRing ? { rotate: [-12, 12, -9, 9, -5, 5, 0] } : { rotate: 0 }}
-          transition={{ duration: 1.1, ease: 'easeInOut' }}
-          style={{ display: 'flex', alignItems: 'flex-end', width: '100%', height: '100%',
-            justifyContent: 'center', gap: 'clamp(0.5rem, 2vw, 2rem)', }}
+        <div style={{ display: 'flex', alignItems: 'flex-end', width: '100%', height: '100%',
+          justifyContent: 'center', gap: 'clamp(0.5rem, 2vw, 2rem)' }}
         >
           {MURTIS.map(m => (
             <MurtiColumn key={m.id} murti={m} isMain={m.id === 'main'} language={language} />
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Aarti note */}
