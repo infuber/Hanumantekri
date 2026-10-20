@@ -82,6 +82,17 @@ const EXTRA_AREAS = [
     entry_fee: 0,
   },
   {
+    id: 'digital-darshan',
+    slug: 'digital-darshan',
+    name_en: 'Digital Darshan',
+    name_hi: 'डिजिटल दर्शन',
+    description_en: 'Light a diya, offer mala, ring the ghanti — a full puja experience with Hanuman Ji.',
+    description_hi: 'दीपक जलाएं, माला चढ़ाएं, घंटी बजाएं — हनुमान जी के साथ पूर्ण पूजा अनुभव।',
+    icon: '🕉️',
+    is_free: true,
+    entry_fee: 0,
+  },
+  {
     id: 'seva-sahyog',
     slug: 'seva-sahyog',
     name_en: 'Seva Sahyog',

@@ -18,6 +18,7 @@ import AartiView from '../components/ui/AartiView'
 import VratKathaView from '../components/ui/VratKathaView'
 import TirthYatraView from '../components/ui/TirthYatraView'
 import SevaSahyogView from '../components/ui/SevaSahyogView'
+import DigitalDarshanView from '../components/ui/DigitalDarshanView'
 import AudioPlayer from '../components/ui/AudioPlayer'
 import ChadhavaPrompt from '../components/ui/ChadhavaPrompt'
 
@@ -49,6 +50,8 @@ function AreaContent() {
       return <TirthYatraView />
     case 'seva-sahyog':
       return <SevaSahyogView />
+    case 'digital-darshan':
+      return <DigitalDarshanView />
     default:
       return null
   }
