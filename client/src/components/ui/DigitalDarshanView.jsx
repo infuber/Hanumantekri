@@ -124,7 +124,7 @@ function Diyas({ active }) {
     <motion.div
       animate={{ x: [0, 90, 0, -90, 0], y: [-20, 20, 60, 20, -20] }}
       transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-      style={{ position: 'absolute', bottom: '38%', left: 'calc(50% - 20px)', pointerEvents: 'none' }}
+      style={{ position: 'absolute', bottom: '38%', left: 'calc(50% - 20px)', pointerEvents: 'none', zIndex: 10 }}
     >
       {/* Flame */}
       <motion.div
@@ -155,7 +155,7 @@ function Agarbatti({ active }) {
     <motion.div
       animate={{ x: [0, -70, 0, 70, 0], y: [40, 0, -30, 0, 40] }}
       transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-      style={{ position: 'absolute', bottom: '35%', left: 'calc(50% - 6px)', pointerEvents: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      style={{ position: 'absolute', bottom: '35%', left: 'calc(50% - 6px)', pointerEvents: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 10 }}
     >
       {/* Smoke particles rising from tip */}
       {[0, 1, 2].map(j => (
