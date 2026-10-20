@@ -119,57 +119,61 @@ function MurtiColumn({ murti, isMain, language }) {
 
 function Diyas({ active }) {
   if (!active) return null
+  // Clockwise elliptical arc in front of murti — like real aarti waving
   return (
-    <div style={{ position: 'absolute', bottom: '3.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '1.2rem', pointerEvents: 'none' }}>
-      {[-1, 0, 1].map(i => (
-        <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <motion.div
-            animate={{ scaleX: [1, 1.3, 0.8, 1.1, 1], scaleY: [1, 0.8, 1.2, 0.9, 1], opacity: [1, 0.8, 1] }}
-            transition={{ duration: 0.8 + i * 0.15, repeat: Infinity, ease: 'easeInOut' }}
-            style={{
-              width: '8px', height: '16px',
-              background: 'linear-gradient(to top, #ff4500, #ffd700, #fff7)',
-              borderRadius: '50% 50% 20% 20%',
-              boxShadow: '0 0 8px #ffd700, 0 0 16px #ff4500',
-            }}
-          />
-          <div style={{ width: '20px', height: '10px', background: 'rgba(180,100,20,0.7)', borderRadius: '50%', marginTop: '-2px' }} />
-        </div>
-      ))}
-    </div>
+    <motion.div
+      animate={{ x: [0, 90, 0, -90, 0], y: [-20, 20, 60, 20, -20] }}
+      transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+      style={{ position: 'absolute', bottom: '38%', left: 'calc(50% - 20px)', pointerEvents: 'none' }}
+    >
+      {/* Flame */}
+      <motion.div
+        animate={{ scaleX: [1, 1.4, 0.8, 1.2, 1], scaleY: [1, 0.8, 1.3, 0.9, 1] }}
+        transition={{ duration: 0.45, repeat: Infinity, ease: 'easeInOut' }}
+        style={{
+          width: '14px', height: '28px', margin: '0 auto',
+          background: 'linear-gradient(to top, #ff4500, #ffd700, rgba(255,255,200,0.9))',
+          borderRadius: '50% 50% 20% 20%',
+          boxShadow: '0 0 20px #ffd700, 0 0 40px #ff6600, 0 0 60px rgba(255,150,0,0.5)',
+        }}
+      />
+      {/* Diya body */}
+      <div style={{
+        width: '42px', height: '16px',
+        background: 'linear-gradient(135deg, #d4891a, #8b4513)',
+        borderRadius: '50%', marginTop: '-3px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.6)',
+      }} />
+    </motion.div>
   )
 }
 
 function Agarbatti({ active }) {
   if (!active) return null
+  // Counter-clockwise arc, slightly offset — weaves in front of murti
   return (
-    <div style={{ position: 'absolute', bottom: '3.5rem', right: '18%', display: 'flex', gap: '1rem', pointerEvents: 'none' }}>
-      {[0, 1].map(i => (
-        <div key={i} style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          {[0, 1, 2].map(j => (
-            <motion.div
-              key={j}
-              style={{
-                position: 'absolute', bottom: '100%',
-                width: '3px', height: '3px', borderRadius: '50%',
-                background: 'rgba(220,220,220,0.7)',
-              }}
-              animate={{
-                y: [0, -40 - j * 20, -80 - j * 20],
-                x: [0, (i === 0 ? -1 : 1) * (j + 1) * 3, (i === 0 ? 1 : -1) * j * 4],
-                opacity: [0, 0.7, 0],
-                scale: [0.5, 1 + j * 0.3, 2 + j * 0.5],
-              }}
-              transition={{ duration: 2.5, delay: j * 0.7 + i * 0.35, repeat: Infinity, ease: 'easeOut' }}
-            />
-          ))}
-          <div style={{ width: '3px', height: '60px', background: 'linear-gradient(to bottom, rgba(180,120,40,0.9), rgba(80,50,20,0.6))', borderRadius: '2px' }} />
-          <div style={{ width: '14px', height: '6px', background: 'rgba(180,120,40,0.5)', borderRadius: '50%' }} />
-        </div>
+    <motion.div
+      animate={{ x: [0, -70, 0, 70, 0], y: [40, 0, -30, 0, 40] }}
+      transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+      style={{ position: 'absolute', bottom: '35%', left: 'calc(50% - 6px)', pointerEvents: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
+      {/* Smoke particles rising from tip */}
+      {[0, 1, 2].map(j => (
+        <motion.div
+          key={j}
+          style={{ position: 'absolute', top: `-${20 + j * 18}px`, width: '4px', height: '4px', borderRadius: '50%', background: 'rgba(200,200,200,0.7)' }}
+          animate={{ y: [-5, -25], x: [0, (j % 2 === 0 ? 6 : -6)], opacity: [0.8, 0], scale: [0.8, 2] }}
+          transition={{ duration: 1.2, delay: j * 0.35, repeat: Infinity, ease: 'easeOut' }}
+        />
       ))}
-    </div>
+      {/* Stick */}
+      <div style={{ width: '3px', height: '70px', background: 'linear-gradient(to bottom, rgba(255,120,0,0.9), rgba(80,40,10,0.8))', borderRadius: '2px' }} />
+      {/* Base */}
+      <div style={{ width: '18px', height: '7px', background: 'rgba(160,100,30,0.7)', borderRadius: '50%' }} />
+    </motion.div>
   )
 }
+
 
 function MalaGarland({ active }) {
   return (
