@@ -69,7 +69,7 @@ function AuthScreen({ onAuth }) {
             marginBottom: '2rem',
           }}
         >
-          HANUMAT TEKARI
+          HANUMAT TEKRI
         </p>
 
         <form onSubmit={handleSubmit}>
@@ -162,7 +162,7 @@ export default function AdminLayout({ children }) {
             letterSpacing: '0.15em',
           }}
         >
-          🕉️ ADMIN — HANUMAT TEKARI
+          🕉️ ADMIN — HANUMAT TEKRI
         </h1>
         <nav style={{ display: 'flex', gap: '0.5rem' }}>
           {TABS.map((tab) => (

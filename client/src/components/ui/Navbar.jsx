@@ -37,7 +37,7 @@ export default function Navbar() {
         }}
         onClick={() => goToInterior()}
       >
-        🕉️ HANUMAT TEKARI
+        🕉️ HANUMAT TEKRI
       </div>
 
       {/* Back button */}

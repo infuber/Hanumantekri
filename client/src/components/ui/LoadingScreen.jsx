@@ -59,7 +59,7 @@ export default function LoadingScreen() {
               textAlign: 'center',
             }}
           >
-            HANUMAT TEKARI
+            HANUMAT TEKRI
           </motion.h1>
 
           <motion.p

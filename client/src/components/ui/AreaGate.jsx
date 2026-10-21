@@ -104,7 +104,7 @@ export default function AreaGate({ area, language, onEnter, onClose }) {
             ₹{area.entry_fee}
           </p>
           <p style={{ color: 'rgba(201,169,110,0.6)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-            Your contribution supports Hanumat Tekari
+            Your contribution supports Hanumat Tekri
           </p>
         </div>
 
