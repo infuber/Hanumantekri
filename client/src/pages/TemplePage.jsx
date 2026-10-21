@@ -21,6 +21,7 @@ import SevaSahyogView from '../components/ui/SevaSahyogView'
 import DigitalDarshanView from '../components/ui/DigitalDarshanView'
 import AudioPlayer from '../components/ui/AudioPlayer'
 import ChadhavaPrompt from '../components/ui/ChadhavaPrompt'
+import SevaSahyogNudge from '../components/ui/SevaSahyogNudge'
 
 function AreaContent() {
   const { currentArea } = useTempleStore()
@@ -97,6 +98,9 @@ export default function TemplePage() {
 
           {/* Chadhava prompt — appears 5s after bell is rung, bottom-left */}
           <ChadhavaPrompt />
+
+          {/* Seva Sahyog nudge — time-based, bottom-right, max 3× per session */}
+          <SevaSahyogNudge />
 
           {/* Entrance hint — shown when view is 'entrance' */}
           {view === 'entrance' && (
