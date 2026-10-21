@@ -130,8 +130,6 @@ function AreaCard({ area, index, language, onSelect }) {
   const [hovered, setHovered] = useState(false)
   const icon = ICON_MAP[area.icon] || area.icon || '🕉️'
 
-  const isPaidArea = !area.is_free
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -178,22 +176,6 @@ function AreaCard({ area, index, language, onSelect }) {
       }}>
         {icon}
       </div>
-
-      {/* Paid badge — only for paid areas */}
-      {isPaidArea && (
-        <span style={{
-          background: 'rgba(255,107,53,0.15)',
-          border: '1px solid rgba(255,107,53,0.4)',
-          color: '#ff6b35',
-          borderRadius: '20px',
-          padding: '0.15rem 0.6rem',
-          fontSize: '0.68rem',
-          fontFamily: 'Cinzel, serif',
-          letterSpacing: '0.06em',
-        }}>
-          ₹{area.entry_fee}
-        </span>
-      )}
 
       {/* Name */}
       <div>

@@ -87,27 +87,6 @@ export default function AreaGate({ area, language, onEnter, onClose }) {
           {language === 'en' ? area.description_en : area.description_hi}
         </p>
 
-        {/* Donation amount */}
-        <div
-          style={{
-            background: 'rgba(255,107,53,0.12)',
-            border: '1px solid rgba(255,107,53,0.4)',
-            borderRadius: '12px',
-            padding: '1rem',
-            marginBottom: '1.5rem',
-          }}
-        >
-          <p style={{ color: '#c9a96e', fontSize: '0.8rem', marginBottom: '0.3rem', fontFamily: 'Cinzel, serif', letterSpacing: '0.08em' }}>
-            SUGGESTED DONATION
-          </p>
-          <p style={{ fontFamily: 'Cinzel, serif', fontSize: '2rem', color: '#ffc107' }}>
-            ₹{area.entry_fee}
-          </p>
-          <p style={{ color: 'rgba(201,169,110,0.6)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-            Your contribution supports Hanumat Tekri
-          </p>
-        </div>
-
         {/* Buttons */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           {/* Seva Sahyog */}
