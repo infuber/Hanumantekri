@@ -19,6 +19,8 @@ import VratKathaView from '../components/ui/VratKathaView'
 import TirthYatraView from '../components/ui/TirthYatraView'
 import SevaSahyogView from '../components/ui/SevaSahyogView'
 import DigitalDarshanView from '../components/ui/DigitalDarshanView'
+import NaamJapaView from '../components/ui/NaamJapaView'
+import LankaRunView from '../components/ui/LankaRunView'
 import AudioPlayer from '../components/ui/AudioPlayer'
 import ChadhavaPrompt from '../components/ui/ChadhavaPrompt'
 import SevaSahyogNudge from '../components/ui/SevaSahyogNudge'
@@ -53,6 +55,10 @@ function AreaContent() {
       return <SevaSahyogView />
     case 'digital-darshan':
       return <DigitalDarshanView />
+    case 'naam-japa':
+      return <NaamJapaView />
+    case 'lanka-run':
+      return <LankaRunView />
     default:
       return null
   }
