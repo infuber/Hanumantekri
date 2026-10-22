@@ -90,7 +90,7 @@ const FAMOUS_TEMPLES = [
   {
     id: 'hanumat-tekri-guna',
     name_hi: 'हनुमत् टेकरी, गुना',
-    name_en: 'Hanumat Tekri',
+    name_en: 'Hanuman Tekri',
     location_en: 'Guna, Madhya Pradesh',
     location_hi: 'गुना, मध्य प्रदेश',
     sig_en: 'The sacred hillock temple after which this virtual mandir is named. Hanuman Ji here is worshipped as Tekri Sarkar — the Lord of the Hill. Thousands of devotees climb the steps each day to seek his blessings at dawn.',
