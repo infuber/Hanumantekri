@@ -188,7 +188,7 @@ const TEMPLES = [
   {
     id: 7,
     nameEn: 'Hanuman Tekri',
-    nameHi: 'हनुमत् तेकरी',
+    nameHi: 'हनुमान टेकरी',
     locationEn: 'Guna, Madhya Pradesh',
     locationHi: 'गुना, मध्य प्रदेश',
     state: 'MP',
@@ -201,7 +201,7 @@ const TEMPLES = [
     significance: 'The sacred hillock (tekri) that gives this very website its name — a place of deep local faith and community devotion.',
     significanceHi: 'यह वही पावन तेकरी है जिसके नाम पर यह वेबसाइट समर्पित है — गुना की गहरी आस्था और सामुदायिक भक्ति का केंद्र।',
     about: 'Hanuman Tekri is a sacred hillock in Guna, Madhya Pradesh — "tekri" means a small hill — and it is the heart of local Hanuman devotion in the region. The temple sits at the top of the hillock with a panoramic view of the entire Guna town and the surrounding plains. Every Tuesday morning, the hillock fills with devotees who climb the steps in devotion. The temple is managed by local priests whose families have served here for generations. The energy here is intimate, community-rooted, and deeply personal — different from the grand temples of larger cities.',
-    aboutHi: 'हनुमत् तेकरी गुना, मध्य प्रदेश की एक पावन पहाड़ी पर स्थित है। "तेकरी" का अर्थ है छोटी पहाड़ी। मंदिर के शिखर से पूरे गुना शहर और आसपास के मैदानों का सुंदर दृश्य दिखता है। प्रत्येक मंगलवार भोर में भक्तों से तेकरी गूंज उठती है। यहाँ की भक्ति व्यक्तिगत और समुदाय-केंद्रित है।',
+    aboutHi: 'हनुमान टेकरी गुना, मध्य प्रदेश की एक पावन पहाड़ी पर स्थित है। "तेकरी" का अर्थ है छोटी पहाड़ी। मंदिर के शिखर से पूरे गुना शहर और आसपास के मैदानों का सुंदर दृश्य दिखता है। प्रत्येक मंगलवार भोर में भक्तों से तेकरी गूंज उठती है। यहाँ की भक्ति व्यक्तिगत और समुदाय-केंद्रित है।',
     specialPuja: [
       'Pratah Aarti — 5:00 AM',
       'Tuesday Mangalwar Puja — dawn (special)',

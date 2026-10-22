@@ -73,7 +73,7 @@ export default function LoadingScreen() {
               textAlign: 'center',
             }}
           >
-            हनुमत टेकरी
+            हनुमान टेकरी
           </motion.p>
 
           {/* Loading bar */}

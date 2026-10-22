@@ -89,7 +89,7 @@ const FAMOUS_TEMPLES = [
   },
   {
     id: 'hanumat-tekri-guna',
-    name_hi: 'हनुमत् टेकरी, गुना',
+    name_hi: 'हनुमान टेकरी, गुना',
     name_en: 'Hanuman Tekri',
     location_en: 'Guna, Madhya Pradesh',
     location_hi: 'गुना, मध्य प्रदेश',
